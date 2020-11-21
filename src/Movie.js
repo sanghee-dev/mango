@@ -29,6 +29,7 @@ function Movie({ year, title, genres, summary, poster }) {
         </ul>
         <p>{checkLength(summary)}</p>
       </div>
+      <h5 className="movie__rating">{rating}</h5>
     </div>
   );
 }
@@ -37,6 +38,7 @@ Movie.propTypes = {
   id: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
