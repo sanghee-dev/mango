@@ -1,5 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Movie.css";
+
+// summary: 글자수 180 이하로 단어단위로 생략
 function checkLength(summary) {
   const maxLength = 180;
   if (summary.length < maxLength) {
@@ -13,23 +16,14 @@ function checkLength(summary) {
   }
 }
 
-function Movie({ year, title, genres, summary, poster }) {
+function Movie({ year, title, rating, genres, summary, poster }) {
   return (
-    <div className="movie">
-      <img className="movie__image" src={poster} alt={title} title={title} />
-      <div className="movie__data">
-        <h3 className="movie__title">{title}</h3>
-        <h5 className="movie__year">{year}</h5>
-        <ul className="movie__genres">
-          {genres.map((genre, index) => (
-            <li className="movie__genres__genre" key={index}>
-              {genre}
-            </li>
-          ))}
-        </ul>
-        <p>{checkLength(summary)}</p>
-      </div>
+    <div className="movie" style={{ backgroundImage: `url(${poster})` }}>
+      <h3 className="movie__title">{title}</h3>
       <h5 className="movie__rating">{rating}</h5>
+      <h5 className="movie__year">{year}</h5>
+      <ul className="movie__genres">{genres.map((genre) => genre + " ")}</ul>
+      <p className="movie__summary">{checkLength(summary)}</p>
     </div>
   );
 }

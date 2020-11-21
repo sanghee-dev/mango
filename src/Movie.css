@@ -1,0 +1,23 @@
+.movie {
+  background-size: 100%;
+  transition: 0.4s ease-in-out;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.movie:hover {
+  border-radius: 100%;
+}
+
+/* movie__background */
+.movie__background {
+  width: 100%;
+  height: 100%;
+}
+
+/* movie__data */
+.movie__title {
+  font-size: 36px;
+}
