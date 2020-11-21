@@ -1,5 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+function checkLength(summary) {
+  const maxLength = 180;
+  if (summary.length < maxLength) {
+    return summary;
+  } else {
+    for (let i = maxLength; i > 0; i--) {
+      if (summary.slice(i, i + 1) === " ") {
+        return summary.slice(0, i) + "...";
+      }
+    }
+  }
+}
 
 function Movie({ year, title, genres, summary, poster }) {
   return (
@@ -15,7 +27,7 @@ function Movie({ year, title, genres, summary, poster }) {
             </li>
           ))}
         </ul>
-        <p className="movie__summary">{summary}</p>
+        <p>{checkLength(summary)}</p>
       </div>
     </div>
   );
