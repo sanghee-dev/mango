@@ -1,6 +1,28 @@
+:root {
+  --main-color: #ffcd48;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+  font-weight: 600;
+  color: black;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.highlighter {
+  background-color: black;
+  color: white;
+  width: fit-content;
+  padding: 4px 8px;
 }
 
 body::-webkit-scrollbar {

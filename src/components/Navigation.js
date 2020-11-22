@@ -5,6 +5,7 @@ import "./Navigation.css";
 function Navigation() {
   return (
     <div className="navigation">
+      <div className="navigation__dots">●</div>
       <h1 className="navigation__title">MANGO MOVIE</h1>
       <div className="navigations">
         <Link to="/" className="navigation__home">
@@ -14,6 +15,7 @@ function Navigation() {
           About
         </Link>
       </div>
+      <div className="navigation__dots">●</div>
     </div>
   );
 }

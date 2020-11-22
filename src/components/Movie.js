@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./Movie.css";
 
-// summary: 글자수 180 이하로 단어단위로 생략
+// summary: summary.length < maxLength && cut by word
 function checkLength(summary) {
-  const maxLength = 180;
+  const maxLength = 80;
   if (summary.length < maxLength) {
     return summary;
   } else {
@@ -17,35 +17,40 @@ function checkLength(summary) {
   }
 }
 
-// rating: 별로 환산
+// rating: rating -> mango
 function starRating(rating) {
   if (rating <= 7) {
-    return "★★";
+    return "●●";
   } else if (rating <= 8) {
-    return "★★★";
+    return "●●●";
   } else if (rating <= 9) {
-    return "★★★★";
+    return "●●●●";
   } else if (rating <= 10) {
-    return "★★★★★";
+    return "●●●●●";
   }
 }
 
 function Movie({ id, year, title, rating, genres, summary, poster }) {
   return (
-    <div className="movie" style={{ backgroundImage: `url(${poster})` }}>
-      <Link
-        to={{
-          pathname: `/movie/${id}`,
-          state: { year, title, rating, genres, summary, poster },
-        }}
-      >
-        <h3 className="movie__title">{title}</h3>
+    <Link
+      className="movies"
+      to={{
+        pathname: `/movie/${id}`,
+        state: { year, title, rating, genres, summary, poster },
+      }}
+    >
+      <div className="movie" style={{ backgroundImage: `url(${poster})` }}>
+        <h3 className="movie__title highlighter">{title}</h3>
+        <h5 className="movie__year highlighter">{year}</h5>
         <h5 className="movie__rating">{starRating(rating)}</h5>
-        <h5 className="movie__year">{year}</h5>
-        <ul className="movie__genres">{genres.map((genre) => genre + " ")}</ul>
-        <p className="movie__summary">{checkLength(summary)}</p>
-      </Link>
-    </div>
+        <h5 className="movie__genres highlighter">
+          {genres
+            .filter((genre, index) => index < 2)
+            .map((genre) => genre + " ")}
+        </h5>
+        <p className="movie__summary highlighter">{checkLength(summary)}</p>
+      </div>
+    </Link>
   );
 }
 

@@ -4,6 +4,9 @@ import "./About.css";
 function About() {
   return (
     <div className="about__container">
+      <div className="about_dots__container">
+        <div className="about__dots">●●●</div>
+      </div>
       <h5>
         That's what I love about music.
         <br />

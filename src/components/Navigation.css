@@ -1,7 +1,8 @@
 .navigation {
-  padding: 8px;
-  text-align: center;
+  padding: 8px 32px;
   font-size: 42px;
+  display: flex;
+  justify-content: space-between;
 }
 .navigations {
   display: none;
@@ -13,11 +14,16 @@
   display: block;
 }
 
-/*  */
 .navigation__home {
   margin-right: 16px;
 }
 
 .navigation a:hover {
   text-decoration: underline;
+}
+
+.navigation__dots {
+  color: var(--main-color);
+  font-size: 60px;
+  letter-spacing: -20px;
 }
