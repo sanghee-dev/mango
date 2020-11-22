@@ -1,14 +1,22 @@
 .movie {
   background-size: 100%;
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .movie:hover {
   border-radius: 100%;
+}
+.movie:hover .movie__rating {
+  display: none;
+}
+.movie:hover .movie__year,
+.movie:hover .movie__genres,
+.movie:hover .movie__summary {
+  display: block;
 }
 
 /* movie__background */
@@ -17,7 +25,20 @@
   height: 100%;
 }
 
-/* movie__data */
+/* movie__data front */
 .movie__title {
   font-size: 36px;
+}
+.movie__rating {
+  font-size: 44px;
+}
+.movie__summary {
+  text-align: left;
+}
+
+/* movie__data back*/
+.movie__year,
+.movie__genres,
+.movie__summary {
+  display: none;
 }
