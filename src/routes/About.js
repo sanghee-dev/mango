@@ -1,11 +1,17 @@
 import React from "react";
+import "./About.css";
 
-function App() {
+function About() {
   return (
-    <div>
-      <h1>About</h1>
+    <div className="about__container">
+      <h5>
+        That's what I love about music.
+        <br />
+        All these banalities suddenly turn into beautiful pearls.
+      </h5>
+      <h5>begin again (2013)</h5>
     </div>
   );
 }
 
-export default App;
+export default About;

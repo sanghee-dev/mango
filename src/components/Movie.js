@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "./Movie.css";
 
 // summary: 글자수 180 이하로 단어단위로 생략
@@ -32,11 +33,17 @@ function starRating(rating) {
 function Movie({ year, title, rating, genres, summary, poster }) {
   return (
     <div className="movie" style={{ backgroundImage: `url(${poster})` }}>
-      <h3 className="movie__title">{title}</h3>
-      <h5 className="movie__rating">{starRating(rating)}</h5>
-      <h5 className="movie__year">{year}</h5>
-      <ul className="movie__genres">{genres.map((genre) => genre + " ")}</ul>
-      <p className="movie__summary">{checkLength(summary)}</p>
+      <Link
+        to={{
+          pathname: "/detail",
+        }}
+      >
+        <h3 className="movie__title">{title}</h3>
+        <h5 className="movie__rating">{starRating(rating)}</h5>
+        <h5 className="movie__year">{year}</h5>
+        <ul className="movie__genres">{genres.map((genre) => genre + " ")}</ul>
+        <p className="movie__summary">{checkLength(summary)}</p>
+      </Link>
     </div>
   );
 }

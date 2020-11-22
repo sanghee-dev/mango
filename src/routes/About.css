@@ -1,0 +1,9 @@
+.about__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
