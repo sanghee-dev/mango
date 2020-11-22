@@ -9,7 +9,7 @@ function About() {
         <br />
         All these banalities suddenly turn into beautiful pearls.
       </h5>
-      <h5>begin again (2013)</h5>
+      <h5>begin again, 2013</h5>
     </div>
   );
 }
