@@ -31,6 +31,7 @@
 }
 .movie__rating {
   font-size: 44px;
+  color: yellow;
 }
 .movie__summary {
   text-align: left;
