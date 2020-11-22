@@ -1,11 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Navigation.css";
 
-function App() {
+function Navigation() {
   return (
-    <div>
-      <h1>Navigation</h1>
+    <div className="navigation">
+      <h1 className="navigation__title">MANGO MOVIE</h1>
+      <div className="navigations">
+        <Link to="/" className="navigation__home">
+          Home
+        </Link>
+        <Link
+          to={{
+            pathname: "/about",
+            state: {},
+          }}
+          className="navigation__about"
+        >
+          About
+        </Link>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default Navigation;

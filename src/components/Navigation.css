@@ -1,0 +1,23 @@
+.navigation {
+  padding: 8px;
+  text-align: center;
+  font-size: 42px;
+}
+.navigations {
+  display: none;
+}
+.navigation:hover .navigation__title {
+  display: none;
+}
+.navigation:hover .navigations {
+  display: block;
+}
+
+/*  */
+.navigation__home {
+  margin-right: 16px;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
