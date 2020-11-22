@@ -10,13 +10,7 @@ function Navigation() {
         <Link to="/" className="navigation__home">
           Home
         </Link>
-        <Link
-          to={{
-            pathname: "/about",
-            state: {},
-          }}
-          className="navigation__about"
-        >
+        <Link to="/about" className="navigation__about">
           About
         </Link>
       </div>
