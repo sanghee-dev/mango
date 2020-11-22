@@ -30,12 +30,12 @@ function starRating(rating) {
   }
 }
 
-function Movie({ year, title, rating, genres, summary, poster }) {
+function Movie({ id, year, title, rating, genres, summary, poster }) {
   return (
     <div className="movie" style={{ backgroundImage: `url(${poster})` }}>
       <Link
         to={{
-          pathname: "/detail",
+          pathname: `/movie/${id}`,
           state: { year, title, rating, genres, summary, poster },
         }}
       >
