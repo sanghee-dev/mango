@@ -44,7 +44,7 @@ class Home extends React.Component {
                   rating={movie.rating}
                   genres={movie.genres}
                   summary={movie.summary}
-                  poster={movie.medium_cover_image}
+                  poster={movie.large_cover_image}
                 />
               );
             })}
