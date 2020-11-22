@@ -36,6 +36,7 @@ function Movie({ year, title, rating, genres, summary, poster }) {
       <Link
         to={{
           pathname: "/detail",
+          state: { year, title, rating, genres, summary, poster },
         }}
       >
         <h3 className="movie__title">{title}</h3>
