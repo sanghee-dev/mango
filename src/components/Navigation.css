@@ -4,8 +4,13 @@
   display: flex;
   justify-content: space-between;
 }
+.navigation__title {
+  margin-top: 6px;
+}
+
 .navigations {
   display: none;
+  margin-top: 6px;
 }
 .navigation:hover .navigation__title {
   display: none;
@@ -25,5 +30,4 @@
 .navigation__dots {
   color: var(--main-color);
   font-size: 60px;
-  letter-spacing: -20px;
 }

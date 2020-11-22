@@ -1,5 +1,7 @@
 :root {
   --main-color: #ffcd48;
+  --loader-color: rgb(255, 205, 72);
+  --loader-color-alpha: rgba(255, 205, 72, 0);
 }
 
 * {
