@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/mango/static/css/main.c04c13c6.chunk.css",
+    "main.js": "/mango/static/js/main.d92c19cd.chunk.js",
+    "main.js.map": "/mango/static/js/main.d92c19cd.chunk.js.map",
+    "runtime-main.js": "/mango/static/js/runtime-main.8884a0fc.js",
+    "runtime-main.js.map": "/mango/static/js/runtime-main.8884a0fc.js.map",
+    "static/js/2.9fe69214.chunk.js": "/mango/static/js/2.9fe69214.chunk.js",
+    "static/js/2.9fe69214.chunk.js.map": "/mango/static/js/2.9fe69214.chunk.js.map",
+    "index.html": "/mango/index.html",
+    "static/css/main.c04c13c6.chunk.css.map": "/mango/static/css/main.c04c13c6.chunk.css.map",
+    "static/js/2.9fe69214.chunk.js.LICENSE.txt": "/mango/static/js/2.9fe69214.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8884a0fc.js",
+    "static/js/2.9fe69214.chunk.js",
+    "static/css/main.c04c13c6.chunk.css",
+    "static/js/main.d92c19cd.chunk.js"
+  ]
+}
