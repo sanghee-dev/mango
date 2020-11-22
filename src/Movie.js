@@ -16,11 +16,24 @@ function checkLength(summary) {
   }
 }
 
+// rating: 별로 환산
+function starRating(rating) {
+  if (rating <= 7) {
+    return "★★";
+  } else if (rating <= 8) {
+    return "★★★";
+  } else if (rating <= 9) {
+    return "★★★★";
+  } else if (rating <= 10) {
+    return "★★★★★";
+  }
+}
+
 function Movie({ year, title, rating, genres, summary, poster }) {
   return (
     <div className="movie" style={{ backgroundImage: `url(${poster})` }}>
       <h3 className="movie__title">{title}</h3>
-      <h5 className="movie__rating">{rating}</h5>
+      <h5 className="movie__rating">{starRating(rating)}</h5>
       <h5 className="movie__year">{year}</h5>
       <ul className="movie__genres">{genres.map((genre) => genre + " ")}</ul>
       <p className="movie__summary">{checkLength(summary)}</p>
