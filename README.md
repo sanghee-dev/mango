@@ -2,11 +2,12 @@
 
 ### Introduction
 
-- Real-time movie information service
+- Real-time **Movie API service**
 - https://sanghee-dev.github.io/mango
 
 ### Main functions
 
+- Get movie API in real-time
 - You can see the movie title, year, rating, genres, summary, poster
 - Watch movies in order of highest rating
 - Movies are rated with a mango rating
