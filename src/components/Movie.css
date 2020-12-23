@@ -23,16 +23,16 @@
 
 /* movie__data front */
 .movie__title {
-  font-size: 28px;
+  font-size: 32px;
 }
 .movie__genres {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 /* movie__data back*/
 .movie__year {
   display: none;
-  font-size: 44px;
+  font-size: 32px;
 }
 .movie__rating {
   display: none;

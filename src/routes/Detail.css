@@ -5,7 +5,7 @@
 }
 
 .detail__poster {
-  filter: blur(2px);
+  filter: blur(0px);
 }
 
 .detail__data {
